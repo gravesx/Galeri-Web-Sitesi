@@ -40,7 +40,7 @@
         <br />
         <div class="container mt-5">
             <div class="row">
-                <!-- 6 Adet Görsel -->
+                
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <img src="img/deniz1.jpg" alt="Görsel 1" class="img-thumbnail img-modal-trigger">
                 </div>
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <!-- Modal -->
+        
         <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -71,7 +71,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <!-- Büyük Görsel -->
+                        
                         <img id="modalImage" src="" class="img-fluid" alt="Büyütülmüþ Görsel">
                     </div>
                 </div>
@@ -84,15 +84,15 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Tüm .img-modal-trigger sýnýfýna sahip img etiketlerini seç
+            
             let images = document.querySelectorAll(".img-modal-trigger");
 
             images.forEach(img => {
                 img.addEventListener("click", function () {
                     let modalImg = document.getElementById("modalImage");
-                    modalImg.src = this.src; // Týklanan görselin src deðerini modal içindeki img'ye aktar
+                    modalImg.src = this.src; 
 
-                    // Bootstrap modalýný aç
+                    
                     let imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
                     imageModal.show();
                 });
