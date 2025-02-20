@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Çöller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-warning-subtle">
+            <div class="container-fluid bg-warning-subtle">
+                <a class="navbar-brand" href="index.html">Dünya</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="okyanus.html" target="_blank">Okyanuslar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cöller.html" target="_blank">Cöller</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ormanlar.html" target="_blank">Ormanlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="denizler.html" target="_blank">Denizler</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+       
+        <div class="bg-warning">
+            <h1 class="text-center">ÇÖLLER</h1>
+        </div>
+
+        <br />
+        <br />
+        <div class="container mt-5">
+            <div class="row">
+               
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl1.jpg" alt="Görsel 1" class="img-thumbnail img-modal-trigger">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl2.jpg" alt="Görsel 2" class="img-thumbnail img-modal-trigger">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl3.jpg" alt="Görsel 3" class="img-thumbnail img-modal-trigger">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl4.jpg" alt="Görsel 4" class="img-thumbnail img-modal-trigger">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl5.jpg" alt="Görsel 5" class="img-thumbnail img-modal-trigger">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/cöl6.jpg" alt="Görsel 6" class="img-thumbnail img-modal-trigger">
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Çöller</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        
+                        <img id="modalImage" src="" class="img-fluid" alt="Büyütülmüþ Görsel">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            let images = document.querySelectorAll(".img-modal-trigger");
+
+            images.forEach(img => {
+                img.addEventListener("click", function () {
+                    let modalImg = document.getElementById("modalImage");
+                    modalImg.src = this.src; 
+
+                    
+                    let imageModal = new bootstrap.Modal(document.getElementById("imageModal"));
+                    imageModal.show();
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
